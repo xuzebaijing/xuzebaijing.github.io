@@ -21,15 +21,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xuzebaijing.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="环境准备一台Linux服务器，CentOS7.6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux搭建饥荒服务器">
 <meta property="og:url" content="https://xuzebaijing.github.io/2022/01/01/Linux%E6%90%AD%E5%BB%BA%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="前端">
+<meta property="og:description" content="环境准备一台Linux服务器，CentOS7.6">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-01T13:18:20.000Z">
-<meta property="article:modified_time" content="2022-01-03T03:26:43.808Z">
+<meta property="article:modified_time" content="2022-01-03T08:33:04.718Z">
 <meta property="article:author" content="Xu">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="饥荒">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,9 +138,14 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -207,7 +215,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-03 11:26:43" itemprop="dateModified" datetime="2022-01-03T11:26:43+08:00">2022-01-03</time>
+      <time title="修改时间：2022-01-03 16:33:04" itemprop="dateModified" datetime="2022-01-03T16:33:04+08:00">2022-01-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A5%A5%E8%8D%92/" itemprop="url" rel="index"><span itemprop="name">饥荒</span></a>
+        </span>
     </span>
 
   
@@ -220,7 +237,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+        <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>一台Linux服务器，CentOS7.6</p>
+<span id="more"></span>
+
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
+<li><p>首先更新<code>yum</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li>
+<li><p>安装游戏运行依赖32位的系统可以忽略。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install glibc.i686 libstdc++.i686 libcurl.i686 vim screen -y</span><br></pre></td></tr></table></figure></li>
+<li><p>使用root账户登录服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd steam <span class="comment"># 创建一个steam账户用来启动饥荒服务器。</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
     
@@ -229,18 +257,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/blog/" rel="tag"># blog</a>
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/%E9%A5%A5%E8%8D%92/" rel="tag"># 饥荒</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2022/01/01/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" rel="prev" title="Hexo+NexT+Github搭建博客过程记录">
+                  <i class="fa fa-chevron-left"></i> Hexo+NexT+Github搭建博客过程记录
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/01/01/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" rel="next" title="Hexo+NexT+Github搭建博客过程记录">
-                  Hexo+NexT+Github搭建博客过程记录 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
