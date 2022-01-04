@@ -21,15 +21,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xuzebaijing.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="环境准备一台Linux服务器，CentOS7.6">
+<meta name="description" content="开始之前这是一篇转载，其中加了自己的小理解 原贴：传送门 环境准备一台Linux服务器，CentOS7.6,多人玩的话最好是2G以上的内存。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux搭建饥荒服务器">
 <meta property="og:url" content="https://xuzebaijing.github.io/2022/01/01/Linux%E6%90%AD%E5%BB%BA%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="前端">
-<meta property="og:description" content="环境准备一台Linux服务器，CentOS7.6">
+<meta property="og:description" content="开始之前这是一篇转载，其中加了自己的小理解 原贴：传送门 环境准备一台Linux服务器，CentOS7.6,多人玩的话最好是2G以上的内存。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-01T13:18:20.000Z">
-<meta property="article:modified_time" content="2022-01-03T08:33:04.718Z">
+<meta property="article:modified_time" content="2022-01-04T15:13:21.938Z">
 <meta property="article:author" content="Xu">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="饥荒">
@@ -121,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,7 +215,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-03 16:33:04" itemprop="dateModified" datetime="2022-01-03T16:33:04+08:00">2022-01-03</time>
+      <time title="修改时间：2022-01-04 23:13:21" itemprop="dateModified" datetime="2022-01-04T23:13:21+08:00">2022-01-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,7 +237,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>一台Linux服务器，CentOS7.6</p>
+        <h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>这是一篇转载，其中加了自己的小理解</p>
+<p>原贴：<a target="_blank" rel="noopener" href="https://www.hxuanyu.com/dst_server.html">传送门</a></p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>一台Linux服务器，CentOS7.6,多人玩的话最好是2G以上的内存。</p>
 <span id="more"></span>
 
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
@@ -245,8 +247,21 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li>
 <li><p>安装游戏运行依赖32位的系统可以忽略。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install glibc.i686 libstdc++.i686 libcurl.i686 vim screen -y</span><br></pre></td></tr></table></figure></li>
-<li><p>使用root账户登录服务器。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd steam <span class="comment"># 创建一个steam账户用来启动饥荒服务器。</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使用root账户登录服务器。创建一个名称为steam账户。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">useradd steam <span class="comment"># 创建一个steam账户用来启动饥荒服务器。</span></span><br><span class="line">passwd steam <span class="comment"># 修改用户steam的密码。</span></span><br><span class="line">su steam <span class="comment">#切换到此用户</span></span><br><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入主目录  /home/steam</span></span><br><span class="line">mkdir steamcdm <span class="comment"># 创建一个名称为steamcdm的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> steamcdm</span><br></pre></td></tr></table></figure></li>
+<li><p>下载steamcmd</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://steamcdn-.akamaihd.net/client/installer/steamcmd_linux.tar.gz <span class="comment">#下载</span></span><br><span class="line">tar -zxvf steamcmd_linux.tar.gz <span class="comment">#解压</span></span><br></pre></td></tr></table></figure></li>
+<li><p>启动steamcmd</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./steamcmd.sh <span class="comment"># 首次启动可能有点慢，国内的服务器可能要多次运行次脚本。</span></span><br><span class="line">login anonymous <span class="comment"># 使用空白账号登录</span></span><br><span class="line">force_install_dir /home/steam/dst <span class="comment"># 在 /home/steam/ 目录下创建一个文件夹为 dst </span></span><br><span class="line">app_update 343050 validate <span class="comment">#下载饥荒开服工具 343050 是appid</span></span><br><span class="line">quit <span class="comment"># 退出steamcmd</span></span><br></pre></td></tr></table></figure></li>
+<li><p>可以启动一次服务器试试,若正常启动<kbd>ctrl</kbd>+<kbd>C</kbd>退出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">cd</span> dst/bin</span><br><span class="line">./dontstarve_dedicated_server_nullrenderer -cluster MyDediServer -shard Master</span><br></pre></td></tr></table></figure></li>
+<li><p>若找不到<code>libcurl-gnutls.so.4</code>手动复制一下。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/lib/libcurl.so.4 ~/dst/bin/lib32/libcurl-gnutls.so.4 </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>有时间在更～</p>
+</blockquote>
+</li>
 </ol>
 
     </div>
