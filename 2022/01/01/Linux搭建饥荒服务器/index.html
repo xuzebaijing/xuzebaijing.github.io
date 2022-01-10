@@ -28,12 +28,15 @@
 <meta property="og:site_name" content="前端">
 <meta property="og:description" content="开始之前这是一篇转载，其中加了自己的小理解 原贴：传送门 环境准备一台Linux服务器，CentOS7.6,多人玩的话最好是2G以上的内存。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xuzebaijing.github.io/.io//1.png">
+<meta property="og:image" content="https://xuzebaijing.github.io/.io//2.png">
 <meta property="article:published_time" content="2022-01-01T13:18:20.000Z">
-<meta property="article:modified_time" content="2022-01-04T15:13:21.938Z">
+<meta property="article:modified_time" content="2022-01-10T15:42:26.482Z">
 <meta property="article:author" content="Xu">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="饥荒">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xuzebaijing.github.io/.io//1.png">
 
 
 <link rel="canonical" href="https://xuzebaijing.github.io/2022/01/01/Linux%E6%90%AD%E5%BB%BA%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8/">
@@ -121,7 +124,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E9%A5%A5%E8%8D%92%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">准备饥荒所需文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%A9%E4%BD%99%E6%93%8D%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">剩余操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E7%85%A7%E6%90%AC%E5%8E%9F%E5%B8%96%E7%9A%84%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">启动服务器（照搬原帖的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">可能遇到的问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,7 +218,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-04 23:13:21" itemprop="dateModified" datetime="2022-01-04T23:13:21+08:00">2022-01-04</time>
+      <time title="修改时间：2022-01-10 23:42:26" itemprop="dateModified" datetime="2022-01-10T23:42:26+08:00">2022-01-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -246,23 +249,101 @@
 <li><p>首先更新<code>yum</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure></li>
 <li><p>安装游戏运行依赖32位的系统可以忽略。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install glibc.i686 libstdc++.i686 libcurl.i686 vim screen -y</span><br></pre></td></tr></table></figure></li>
-<li><p>使用root账户登录服务器。创建一个名称为steam账户。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">useradd steam <span class="comment"># 创建一个steam账户用来启动饥荒服务器。</span></span><br><span class="line">passwd steam <span class="comment"># 修改用户steam的密码。</span></span><br><span class="line">su steam <span class="comment">#切换到此用户</span></span><br><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入主目录  /home/steam</span></span><br><span class="line">mkdir steamcdm <span class="comment"># 创建一个名称为steamcdm的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> steamcdm</span><br></pre></td></tr></table></figure></li>
-<li><p>下载steamcmd</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://steamcdn-.akamaihd.net/client/installer/steamcmd_linux.tar.gz <span class="comment">#下载</span></span><br><span class="line">tar -zxvf steamcmd_linux.tar.gz <span class="comment">#解压</span></span><br></pre></td></tr></table></figure></li>
-<li><p>启动steamcmd</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./steamcmd.sh <span class="comment"># 首次启动可能有点慢，国内的服务器可能要多次运行次脚本。</span></span><br><span class="line">login anonymous <span class="comment"># 使用空白账号登录</span></span><br><span class="line">force_install_dir /home/steam/dst <span class="comment"># 在 /home/steam/ 目录下创建一个文件夹为 dst </span></span><br><span class="line">app_update 343050 validate <span class="comment">#下载饥荒开服工具 343050 是appid</span></span><br><span class="line">quit <span class="comment"># 退出steamcmd</span></span><br></pre></td></tr></table></figure></li>
-<li><p>可以启动一次服务器试试,若正常启动<kbd>ctrl</kbd>+<kbd>C</kbd>退出。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">cd</span> dst/bin</span><br><span class="line">./dontstarve_dedicated_server_nullrenderer -cluster MyDediServer -shard Master</span><br></pre></td></tr></table></figure></li>
-<li><p>若找不到<code>libcurl-gnutls.so.4</code>手动复制一下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/lib/libcurl.so.4 ~/dst/bin/lib32/libcurl-gnutls.so.4 </span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>有时间在更～</p>
-</blockquote>
 </li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install glibc.i686 libstdc++.i686 libcurl.i686 vim screen -y</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用root账户登录服务器。创建一个名称为steam账户。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">useradd steam <span class="comment"># 创建一个steam账户用来启动饥荒服务器。</span></span><br><span class="line">passwd steam <span class="comment"># 修改用户steam的密码。</span></span><br><span class="line">su steam <span class="comment">#切换到此用户</span></span><br><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#进入主目录  /home/steam</span></span><br><span class="line">mkdir steamcdm <span class="comment"># 创建一个名称为steamcdm的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> steamcdm</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>下载steamcmd</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://steamcdn-.akamaihd.net/client/installer/steamcmd_linux.tar.gz <span class="comment">#下载</span></span><br><span class="line">tar -zxvf steamcmd_linux.tar.gz <span class="comment">#解压</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>启动steamcmd</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./steamcmd.sh <span class="comment"># 首次启动可能有点慢，国内的服务器可能要多次运行次脚本。</span></span><br><span class="line">login anonymous <span class="comment"># 使用空白账号登录</span></span><br><span class="line">force_install_dir /home/steam/dst <span class="comment"># 在 /home/steam/ 目录下创建一个文件夹为 dst </span></span><br><span class="line">app_update 343050 validate <span class="comment">#下载饥荒开服工具 343050 是appid</span></span><br><span class="line">quit <span class="comment"># 退出steamcmd</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>可以启动一次服务器试试,若正常启动<kbd>ctrl</kbd>+<kbd>C</kbd>退出。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">cd</span> dst/bin</span><br><span class="line">./dontstarve_dedicated_server_nullrenderer -cluster MyDediServer -shard Master</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>若找不到<code>libcurl-gnutls.so.4</code>手动复制一下。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/lib/libcurl.so.4 ~/dst/bin/lib32/libcurl-gnutls.so.4 </span><br></pre></td></tr></table></figure>
+<h2 id="准备饥荒所需文件"><a href="#准备饥荒所需文件" class="headerlink" title="准备饥荒所需文件"></a>准备饥荒所需文件</h2><ol>
+<li><p>生成 <code>cluster_token</code> 每个人的都不同。自行百度如何生成。 </p>
+</li>
+<li><p>打开饥荒=&gt;点击创建游戏。查看一下目前已经有的存档。最好没有存档。</p>
+</li>
+<li><p>饥荒可以有4个本地存档，从上至下的文件夹名称依次为 <code>Cluster_1</code>、<code>Cluster_2</code>、<code>Cluster_3</code>、<code>Cluster_4</code>。</p>
+</li>
+<li><p>点击创建新的世界，完成后在选人界面直接退出。</p>
+</li>
+<li><p>点击数据<br><img src="/.io//1.png"></p>
+</li>
+<li><p>找到你的存档。若创建存档之前没有存档，文件夹名称应该为<code>Cluster_1</code>。</p>
+<p><img src="/.io//2.png"></p>
+</li>
+<li><p>打开<code>Cluster_1</code>文件夹，在根目录下创建一个<code>cluster_token.txt</code>文件。把之前获取的<code>cluster_token</code>粘贴进去，保存关闭即可。</p>
+</li>
+<li><p>还可以添加存档管理员，存档黑名单，这个自行百度或者看原贴。</p>
+</li>
+</ol>
+<h2 id="剩余操作"><a href="#剩余操作" class="headerlink" title="剩余操作"></a>剩余操作</h2><ol>
+<li>把<code>Cluster_1</code>整个文件夹上传到<code>/home/steam/.klei/DoNotStarveTogether/</code>目录下。<blockquote>
+<p>上传时用服务器的steam角色上传。</p>
+</blockquote>
+</li>
+<li>配置mod，执行<code>vim ~/dst/mods/dedicated_server_mods_setup.lua</code>按下<kbd>i</kbd>进入编辑模式，输入mod信息。</li>
+</ol>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ServerModSetup(<span class="string">&quot;375850593&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;2119742489&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;378160973&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;374550642&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;1200745268&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;666155465&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;1207269058&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;1898292532&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;1998081438&quot;</span>)</span><br><span class="line">ServerModSetup(<span class="string">&quot;362175979&quot;</span>)</span><br><span class="line"># 数字是<span class="built_in">mod</span>的ID</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>启动服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在服务器的steam账户下操作</span></span><br><span class="line"><span class="built_in">cd</span> ~/dst/bin</span><br><span class="line"><span class="comment"># 启动地面世界</span></span><br><span class="line">./dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Master</span><br><span class="line"><span class="comment"># 启动洞穴世界</span></span><br><span class="line">./dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Caves</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="启动服务器（照搬原帖的）"><a href="#启动服务器（照搬原帖的）" class="headerlink" title="启动服务器（照搬原帖的）"></a>启动服务器（照搬原帖的）</h2></li>
+<li><p>脚本方式（推荐）。</p>
+<p>在steam目录下新建文件夹并进入</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/dst_scripts</span><br><span class="line"><span class="built_in">cd</span> dst_scripts</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>新建三个脚本文件并授予执行权限</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">touch master.sh</span><br><span class="line">touch caves.sh</span><br><span class="line">touch update.sh</span><br><span class="line"></span><br><span class="line">chmod a+x master.sh</span><br><span class="line">chmod a+x caves.sh</span><br><span class="line">chmod a+x update.sh</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>分别在三个脚本文件中添加指令</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## master.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">cd</span> ~/dst/bin</span><br><span class="line">screen -dmS <span class="string">&quot;master&quot;</span> ./dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Master</span><br><span class="line"><span class="comment">## caves.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">cd</span> ~/dst/bin</span><br><span class="line">screen -dmS <span class="string">&quot;caves&quot;</span> ./dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Caves</span><br><span class="line"><span class="comment">## update.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="comment">#更新游戏</span></span><br><span class="line">~/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/dst +app_update 343050 validate +quit</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>脚本中使用screen命令启动对应进程，所以不会直接显示对应的界面，如果需要查看主世界进程，输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -r master</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>同理，查看洞穴则输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -r caves</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>隐藏控制台则按下<code>Ctrl + A</code>然后再按<code>Ctrl + D</code>即可。</p>
+</li>
+<li><p>启动游戏 </p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./master.sh</span><br><span class="line">./caves.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><p>如果在启动过程中遇到了权限问题，大概率是上传文件时使用了root账户，steam没有权限直接读写这些文件，解决办法（需先切换到root用户）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown -R steam:steam /home/steam </span><br><span class="line">su steam</span><br></pre></td></tr></table></figure>
 
     </div>
 
